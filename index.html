@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify Vibes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="song-card">
+      <img src="https://i.pinimg.com/736x/bd/e7/41/bde74189b5636c40d48c84f9e0c47dc0.jpg" alt="Album Cover" class="album-cover" />
+      <h2 class="song-title">Dancing in the crowd<br>Dyar Pshder</h2>
+      <a href="https://open.spotify.com/track/5qBQIy7aczEtJgRTDOC7vy?si=44e7ee63fd714995"
+         class="song-link" target="_blank">Listen on Spotify</a>
+
+      <!-- Custom Play Button -->
+      <button id="play-btn">▶ Play Song</button>
+      <audio id="audio-player" src="your-song.mp3"></audio>
+    </div>
+
+    <div class="lyrics-card">
+      <button id="toggle-lyrics">Show Lyrics</button>
+      <div class="lyrics hidden">
+        <p>
+          Will You Come Over anD spend the time?<br>
+          Until the sunrise<br>
+          Your SKin is too bright shining in the dark<br>
+          Oh GODD!!!<br>
+          ...
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Toggle Lyrics
+    document.getElementById('toggle-lyrics').addEventListener('click', function () {
+      const lyrics = document.querySelector('.lyrics');
+      lyrics.classList.toggle('hidden');
+      this.textContent = lyrics.classList.contains('hidden') ? 'Show Lyrics' : 'Hide Lyrics';
+    });
+
+    // Play Button Functionality
+    const audio = document.getElementById('audio-player');
+    const playBtn = document.getElementById('play-btn');
+
+    playBtn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        playBtn.textContent = '⏸ Pause';
+      } else {
+        audio.pause();
+        playBtn.textContent = '▶ Play Song';
+      }
+    });
+  </script>
+</body>
+</html>

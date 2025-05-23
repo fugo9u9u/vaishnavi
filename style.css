@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: rgb(255, 255, 255);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  max-width: 400px;
+}
+
+.song-card {
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(1, 217, 255, 0.5);
+}
+
+.album-cover {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.song-title {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.song-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #1db954;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.song-link:hover {
+  text-decoration: underline;
+}
+
+.lyrics-card {
+  background: #1f1f1f;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+button#toggle-lyrics {
+  background-color: #1db954;
+  border: none;
+  padding: 10px 20px;
+  color: rgb(8, 8, 8);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.lyrics {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.hidden {
+  display: none;
+}
